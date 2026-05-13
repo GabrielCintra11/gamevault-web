@@ -16,7 +16,7 @@ const navVersion = document.getElementById("nav-version");
 const footerVersion = document.getElementById("footer-version");
 
 // Versão atual do frontend
-const VERSAO = "1.0.0";
+const VERSAO = "1.0.1";
 
 // Atualizar versão na interface
 navVersion.textContent = `v${VERSAO}`;

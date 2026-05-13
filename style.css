@@ -505,6 +505,26 @@ body {
   color: var(--text-muted) !important;
 }
 
+.footer-links {
+  margin-top: 0.5rem;
+  font-size: 0.85rem !important;
+}
+
+.footer-link {
+  color: var(--accent-2);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-link:hover {
+  color: var(--accent-3);
+}
+
+.footer-separator {
+  color: var(--text-muted);
+  margin: 0 0.5rem;
+}
+
 /* ==============================
    RESPONSIVO
    ============================== */
