@@ -1,0 +1,29 @@
+name: Deploy GameVault Web - Vercel
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do repositório
+        uses: actions/checkout@v3
+
+      - name: Verificar tag detectada
+        run: echo "🏷️ Tag detectada - ${{ github.ref_name }}"
+
+      - name: Instalar Vercel CLI
+        run: npm install -g vercel
+
+      - name: Deploy na Vercel (Produção)
+        run: |
+          echo "🚀 Iniciando deploy na Vercel..."
+          vercel --prod --token=${{ secrets.VERCEL_TOKEN }} --yes
+          echo "✅ Deploy realizado com sucesso!"
+        env:
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}

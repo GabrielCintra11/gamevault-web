@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GameVault - Catálogo de jogos premium com os melhores títulos do mundo gaming">
+    <title>GameVault — Catálogo de Jogos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Partículas de fundo -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="header-content">
+            <div class="logo">
+                <span class="logo-icon">🎮</span>
+                <span class="logo-text">Game<span class="highlight">Vault</span></span>
+            </div>
+            <nav class="nav">
+                <span class="nav-version" id="nav-version">v1.0.0</span>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="hero-title-line">Descubra o seu</span>
+                <span class="hero-title-line gradient-text">próximo jogo favorito</span>
+            </h1>
+            <p class="hero-subtitle">
+                Explore nossa curadoria dos melhores jogos de todos os tempos. 
+                Notas, plataformas e gêneros — tudo em um só lugar.
+            </p>
+            <div class="hero-stats" id="hero-stats">
+                <div class="stat">
+                    <span class="stat-number" id="stat-total">—</span>
+                    <span class="stat-label">Jogos</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" id="stat-media">—</span>
+                    <span class="stat-label">Nota Média</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" id="stat-generos">—</span>
+                    <span class="stat-label">Gêneros</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catálogo -->
+    <main class="catalogo" id="catalogo">
+        <div class="catalogo-header">
+            <h2 class="section-title">🕹️ Catálogo</h2>
+            <p class="section-subtitle">Os títulos mais aclamados pela comunidade gamer</p>
+        </div>
+
+        <!-- Loading -->
+        <div class="loading" id="loading">
+            <div class="loading-spinner"></div>
+            <p>Carregando jogos...</p>
+        </div>
+
+        <!-- Erro -->
+        <div class="erro" id="erro" style="display: none;">
+            <span class="erro-icon">⚠️</span>
+            <p class="erro-msg">Não foi possível carregar os jogos.</p>
+            <button class="btn-retry" onclick="carregarJogos()">Tentar novamente</button>
+        </div>
+
+        <!-- Grid de jogos -->
+        <div class="jogos-grid" id="jogos-grid"></div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="footer-content">
+            <p>🎮 <strong>GameVault</strong> — Projeto CI/CD</p>
+            <p class="footer-version">Versão <span id="footer-version">1.0.0</span> • Deploy via GitHub Actions</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
