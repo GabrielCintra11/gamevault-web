@@ -3,7 +3,7 @@
 // ==============================
 
 // URL da API no Render (será atualizada após o deploy)
-const API_URL = "https://gamevault-api.onrender.com";
+const API_URL = "https://gamevault-api-7pjq.onrender.com";
 
 // Elementos do DOM
 const jogosGrid = document.getElementById("jogos-grid");
